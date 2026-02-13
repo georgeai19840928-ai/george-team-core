@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Deep Research Theme Schema",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string",
+      "description": "The main research topic."
+    },
+    "depth": {
+      "type": "integer",
+      "description": "The search depth for iterative research.",
+      "minimum": 1
+    },
+    "domains_to_exclude": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of domains to filter out from search results."
+    },
+    "language": {
+      "type": "string",
+      "description": "The preferred language for research results (e.g., 'zh-TW', 'en')."
+    }
+  },
+  "required": ["topic", "depth", "domains_to_exclude", "language"]
+}
